@@ -62,5 +62,5 @@ Date is:  11-10-2020
 pipenv run python3 app.py append >> results.txt
 pipenv run pytest tests/tests.py >> results.txt
 ```
-
+7. Написав makefile для лабораторної. Додав правила налаштування середовища та встановив залежності ( make install), запустив модульні тести ( make test), запустив додаток ( make run) та розгорнув ( make deploy).
 
