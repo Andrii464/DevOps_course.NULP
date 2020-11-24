@@ -18,4 +18,10 @@ pipenv run python manage.py runserver
 ```
 Локальний сервер запущено на порті: 8000
 
++ Створив новий Django додаток head
+```
+pipenv run python manage.py startapp head
+
+```
++ Створив нову директорію `./head/templates`, створено файли `./head/templates/index.html` та `./head/urls.py`
 
