@@ -25,3 +25,33 @@ pipenv run python manage.py startapp head
 ```
 + Створив нову директорію `./head/templates`, створено файли `./head/templates/index.html` та `./head/urls.py`
 
++ Добавлення додатку до константи `INSTALLED_APPS`
+```python
+INSTALLED_APPS = [
+    'head',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
++ Додавання індексації додатку у файлі посилань `urls.py`
+
+```
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('head.urls')),
+    path('health/', include('head.urls'))
+]
+``` 
++ Поєднав функції із реальними URL шляхами head/urls.py
+```
+    urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'health/', views.health, name='health')
+]
+``` 
