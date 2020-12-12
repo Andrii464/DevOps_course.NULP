@@ -65,7 +65,7 @@ pipenv run pytest test_app.py --url http://localhost:5000
     ```
     make push
     ```
-    - [Посилання на Docker Hub репозиторій](https://hub.docker.com/reposidoctory/docker/andee1/lab5);
+    - [Посилання на Docker Hub репозиторій](https://hub.docker.com/repository/docker/andee1/lab5);
 
 11. Видаляю створені та завантаженні імеджі. Створюю директиву `delete-images` в `Makefile`, яка автоматизує процес видалення імеджів. Команда `docker images` виводить наступне:
     
@@ -107,7 +107,7 @@ Docker-compose
    - За допомогою `docker-compose`  можна визначити багатоконтейнерну структуру в одному файлі, потім працювати з своєю програмою виконуючи лише одну команду, яка робить усе необхідне для її запуску, зупинки.
        
 2. Створюю `docker-compose.yaml` для лабораторної №4:
-   - `docker-compose.yaml` створює два імеджі для Django сайту та моніторингу ([docker-compose.yaml]() файл знаходиться тут);     
+   - `docker-compose.yaml` створює два імеджі для Django сайту та моніторингу ([docker-compose.yaml](https://github.com/Andrii464/labs/blob/main/Lab_4/docker-compose.yaml) файл знаходиться тут);     
    - Запускаю `docker-compose.yaml` командою
         ```
         docker-compose -p lab4 up
