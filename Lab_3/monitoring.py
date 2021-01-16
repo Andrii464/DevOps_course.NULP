@@ -27,7 +27,9 @@ def main(url):
         except (requests.exceptions.ConnectionError and Exception) as e:
             logging.error('Сервер недоступний')
             logging.error(f'Помилка: {e}')
-        wait(60)
+            if '--once' in sys.argv:
+                break
+           wait(60)
 
 
 if __name__ == '__main__':
