@@ -19,6 +19,7 @@ jobs:
         - pipenv install
       before_install:
         - cd ./Lab_3/
+        - chmod +x travis-build.sh
       script: ./travis-build.sh
     - stage: "Build Lab 4"
       name: "Build Docker Images"
