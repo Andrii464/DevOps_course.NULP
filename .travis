@@ -1,0 +1,52 @@
+language: python
+
+python:
+  - "3.6"
+
+jobs:
+  include:
+    - stage: "Build Lab 2"
+      name: "Run tests Lab 2"
+      python: 3.6
+      install:
+        - cd ./Lab_2/
+        - make install
+      script: make test
+    - stage: "Build Lab 3"
+      name: "Run Django Server and test"
+      python: 3.6
+      install:
+        - pipenv install
+      before_install:
+        - cd ./Lab_3/
+        - chmod +x travis-build.sh
+      script: ./travis-build.sh
+    - stage: "Build Lab 4"
+      name: "Build Docker Images"
+      services:
+        - docker
+      install:
+        - cd ./Lab_4/
+      script:
+        - docker build -t andee1/lab4_django-travis .
+        - docker build -t andee1/lab4_django:monitoring-travis -f Dockerfile.monit .
+        - docker images
+        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$D_PASSWORD" | docker login -u "$D_USERNAME" --password-stdin; docker push andee1/lab4_django-travis; else echo "PR skip deploy"; fi
+        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$D_PASSWORD" | docker login -u "$D_USERNAME" --password-stdin; docker push andee1/lab4_django:monitoring-travis; else echo "PR skip deploy"; fi
+    - stage: "Build Lab 5"
+      name: "Build and run Docker Images"
+      services:
+        - docker
+      install:
+        - cd ./Lab_5/
+        - make app
+        - make tests
+      script:
+        - make run
+        - make test-app
+        - echo "$D_PASSWORD" | docker login -u "$D_USERNAME" --password-stdin
+        - make push
+branches:
+  only:
+    - master
+    - main

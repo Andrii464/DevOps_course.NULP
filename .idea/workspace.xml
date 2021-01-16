@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1f5410c-765e-4876-be3e-415e2d046d64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_5/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,16 +67,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="199" y="27" width="1024" height="741" key="#Project_Structure" timestamp="1607770584662">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="199" y="27" width="1024" height="741" key="#Project_Structure/67.27.1299.741@67.27.1299.741" timestamp="1607770584662" />
-    <state x="419" y="198" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607768713473">
+    <state x="419" y="198" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610792443922">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="419" y="198" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1607768713473" />
+    <state x="419" y="198" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1610792443922" />
     <state x="379" y="89" key="search.everywhere.popup" timestamp="1607791260132">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
